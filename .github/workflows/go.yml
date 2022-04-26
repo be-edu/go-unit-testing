@@ -29,7 +29,7 @@ jobs:
     - run: go version
 
     - name: Build
-      run: go build ./... -o ~/
+      run: go build ./... -o ~
       
     - name: Show build
       run: |
