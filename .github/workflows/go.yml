@@ -29,11 +29,11 @@ jobs:
     - run: go version
 
     - name: Build
-      run: go build ./...
+      run: go build ./... -o ~/
       
     - name: Show build
       run: |
-        ls -l
+        ls -l ~/
 
     - name: Test
       run: go test ./...
