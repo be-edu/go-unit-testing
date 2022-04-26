@@ -32,20 +32,25 @@ jobs:
       run: |
         ls -l ~/
 
-    - name: Create output directory
+    - name: Create artifact directory
       run: |
-        mkdir ~/output
+        mkdir ~/artifact
 
     - name: Print working directory
       run: |
         pwd
 
     - name: Build
-      run: go build -o ~/output
+      run: go build -o ~/artifact
       
     - name: Show build
       run: |
-        ls -l ~/output
+        ls -l ~/artifact
 
     - name: Test
       run: go test ./...
+      
+    - uses: actions/upload-artifact@v3
+      with:
+        name: my-artifact
+        path: ~/artifact/
