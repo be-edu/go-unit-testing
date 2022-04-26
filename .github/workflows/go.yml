@@ -37,7 +37,7 @@ jobs:
         pwd
 
     - name: Build
-      run: go build ./... -o ~
+      run: go build /home/runner/work/go-unit-testing/go-unit-testing -o ~
       
     - name: Show build
       run: |
