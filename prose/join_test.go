@@ -13,7 +13,7 @@ func TestOneElement1(t *testing.T) {
 
 	// Act
 	//
-	got := JoinWithCommas2(list)
+	got := JoinWithCommas1(list)
 
 	// Assert
 	//
