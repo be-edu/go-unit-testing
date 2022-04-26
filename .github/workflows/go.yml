@@ -32,16 +32,20 @@ jobs:
       run: |
         ls -l ~/
 
-    - name: PWD
+    - name: Create output directory
+      run: |
+        mkdir ~/output
+
+    - name: Print working directory
       run: |
         pwd
 
     - name: Build
-      run: go build -o ~
+      run: go build -o ~/output
       
     - name: Show build
       run: |
-        ls -l ~/
+        ls -l ~/output
 
     - name: Test
       run: go test ./...
