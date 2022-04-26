@@ -28,6 +28,10 @@ jobs:
       
     - run: go version
 
+    - name: Show home dir
+      run: |
+        ls -l ~/
+
     - name: Build
       run: go build ./... -o ~
       
