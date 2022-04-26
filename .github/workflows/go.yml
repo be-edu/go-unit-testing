@@ -32,6 +32,10 @@ jobs:
       run: |
         ls -l ~/
 
+    - name: PWD
+      run: |
+        pwd
+
     - name: Build
       run: go build ./... -o ~
       
