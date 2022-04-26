@@ -30,6 +30,10 @@ jobs:
 
     - name: Build
       run: go build ./...
+      
+    - name: Show build
+      run: |
+        ls -l
 
     - name: Test
       run: go test ./...
